@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#141e30,#243b55);
+    padding:20px;
+}
+
+.container{
+    width:700px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    padding:30px;
+    border-radius:25px;
+    color:white;
+    box-shadow:0 8px 32px rgba(0,0,0,0.4);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.top-section{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr auto;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.top-section input,
+.top-section select{
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+}
+
+.top-section button{
+    padding:15px 20px;
+    border:none;
+    border-radius:12px;
+    background:#00e5ff;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#searchInput{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    margin-bottom:20px;
+    outline:none;
+}
+
+#taskCount{
+    margin-bottom:20px;
+}
+
+ul{
+    list-style:none;
+}
+
+li{
+    background:rgba(255,255,255,0.1);
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+}
+
+.task-info{
+    flex:1;
+}
+
+.completed{
+    text-decoration:line-through;
+    opacity:0.6;
+}
+
+.priority-high{
+    color:#ff5252;
+    font-weight:bold;
+}
+
+.priority-medium{
+    color:#ffd740;
+    font-weight:bold;
+}
+
+.priority-low{
+    color:#69f0ae;
+    font-weight:bold;
+}
+
+.task-buttons button{
+    margin-left:8px;
+    border:none;
+    padding:8px 12px;
+    border-radius:10px;
+    cursor:pointer;
+    color:white;
+}
+
+.complete-btn{
+    background:#00c853;
+}
+
+.edit-btn{
+    background:#2979ff;
+}
+
+.delete-btn{
+    background:#ff1744;
+}
+
+@media(max-width:768px){
+
+    .container{
+        width:100%;
+    }
+
+    .top-section{
+        grid-template-columns:1fr;
+    }
+
+    li{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+}
